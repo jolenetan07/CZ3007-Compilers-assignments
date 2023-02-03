@@ -31,6 +31,9 @@ import static frontend.Token.Type.*;
 	 *       but they should not be part of the lexeme. 
 	*/
 	private Token token(Token.Type type, String text) {
+		if (type == STRING_LITERAL) {
+			text = text.substring(1, text.length() - 1);
+		}
 		return new Token(type, yyline, yycolumn, text);
 	}
 %}
