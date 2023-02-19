@@ -85,6 +85,10 @@ Parameter = TypeName ID;
 Statement = VariableDeclaration
 	    | StatementBlock
 	    | IfStatement
+	    | WhileStatement
+	    | BreakStatement
+	    | ReturnStatement
+	    | ExpressionStatement
 	    ;
 
 VariableDeclaration = TypeName ID SEMICOLON;
